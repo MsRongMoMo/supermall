@@ -1,13 +1,126 @@
 <template>
-  <div>我的</div>
+  <div class="profile">
+    <scroll class="content">
+       <ul>
+      <li>你好啊1</li>
+      <li>你好啊2</li>
+      <li>你好啊3</li>
+      <li>你好啊4</li>
+      <li>你好啊5</li>
+      <li>你好啊6</li>
+      <li>你好啊7</li>
+      <li>你好啊8</li>
+      <li>你好啊9</li>
+      <li>你好啊10</li>
+      <li>你好啊11</li>
+      <li>你好啊12</li>
+      <li>你好啊13</li>
+      <li>你好啊14</li>
+      <li>你好啊15</li>
+      <li>你好啊16</li>
+      <li>你好啊17</li>
+      <li>你好啊18</li>
+      <li>你好啊19</li>
+      <li>你好啊20</li>
+      <li>你好啊21</li>
+      <li>你好啊22</li>
+      <li>你好啊23</li>
+      <li>你好啊24</li>
+      <li>你好啊25</li>
+      <li>你好啊26</li>
+      <li>你好啊27</li>
+      <li>你好啊28</li>
+      <li>你好啊29</li>
+      <li>你好啊30</li>
+      <li>你好啊31</li>
+      <li>你好啊32</li>
+      <li>你好啊33</li>
+      <li>你好啊34</li>
+      <li>你好啊35</li>
+      <li>你好啊36</li>
+      <li>你好啊37</li>
+      <li>你好啊38</li>
+      <li>你好啊39</li>
+      <li>你好啊40</li>
+      <li>你好啊41</li>
+      <li>你好啊42</li>
+      <li>你好啊43</li>
+      <li>你好啊44</li>
+      <li>你好啊45</li>
+      <li>你好啊46</li>
+      <li>你好啊47</li>
+      <li>你好啊48</li>
+      <li>你好啊49</li>
+      <li>你好啊50</li>
+      <li>你好啊51</li>
+      <li>你好啊52</li>
+      <li>你好啊53</li>
+      <li>你好啊54</li>
+      <li>你好啊55</li>
+      <li>你好啊56</li>
+      <li>你好啊57</li>
+      <li>你好啊58</li>
+      <li>你好啊59</li>
+      <li>你好啊60</li>
+      <li>你好啊61</li>
+      <li>你好啊62</li>
+      <li>你好啊63</li>
+      <li>你好啊64</li>
+      <li>你好啊65</li>
+      <li>你好啊66</li>
+      <li>你好啊67</li>
+      <li>你好啊68</li>
+      <li>你好啊69</li>
+      <li>你好啊70</li>
+      <li>你好啊71</li>
+      <li>你好啊72</li>
+      <li>你好啊73</li>
+      <li>你好啊74</li>
+      <li>你好啊75</li>
+      <li>你好啊76</li>
+      <li>你好啊77</li>
+      <li>你好啊78</li>
+      <li>你好啊79</li>
+      <li>你好啊80</li>
+      <li>你好啊81</li>
+      <li>你好啊82</li>
+      <li>你好啊83</li>
+      <li>你好啊84</li>
+      <li>你好啊85</li>
+      <li>你好啊86</li>
+      <li>你好啊87</li>
+      <li>你好啊88</li>
+      <li>你好啊89</li>
+      <li>你好啊90</li>
+      <li>你好啊91</li>
+      <li>你好啊92</li>
+      <li>你好啊93</li>
+      <li>你好啊94</li>
+      <li>你好啊95</li>
+      <li>你好啊96</li>
+      <li>你好啊97</li>
+      <li>你好啊98</li>
+      <li>你好啊99</li>
+      <li>你好啊100</li>
+    </ul>
+    </scroll>
+  </div>
 </template>
 
 <script>
+import Scroll from 'components/common/scroll/Scroll'
 export default {
+  components:{
+    Scroll
+  }
 
 }
 </script>
 
-<style>
-
+<style scoped>
+.content{
+  height: 300px;
+  background-color: oldlace;
+  overflow: hidden;
+}
 </style>

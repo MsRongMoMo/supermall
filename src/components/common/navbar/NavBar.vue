@@ -18,6 +18,10 @@ export default {
     display: flex;
     height: 44px;
     line-height: 44px;
+     text-align: center;
+     font-family: "微软雅黑","Microsoft YaHei",;
+     font-size: 18px;
+     
 
   }
   .left,.right{
@@ -25,6 +29,6 @@ export default {
   }
   .center{
     flex: 1;
-    text-align: center;
+   
   }
 </style>

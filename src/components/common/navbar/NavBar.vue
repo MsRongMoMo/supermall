@@ -26,6 +26,7 @@ export default {
   }
   .left,.right{
     width: 60px;
+    box-sizing: border-box;
   }
   .center{
     flex: 1;

@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <nav-bar class="home-nav">
-      <div slot="center">购物车</div>
+      <div slot="center">supermall</div>
     </nav-bar>
     <tab-control  ref="tabControl_2"  :title="['流行','新款','精选']" class="tabControl"
       @selectedClick="itemClick"  v-show="isShowTabControl"
@@ -32,6 +32,8 @@ import RecommendView from "views/home/childComps/RecommendView";
 import FeatureView from "views/home/childComps/FeatureView";
 
 import { getHomeMultidata, getHomeGoods } from "network/home";
+import {deBounce} from 'common/utils'
+import {itemImgListener} from 'common/itemImgListenerMixins'
 export default {
   components: {
     NavBar,
@@ -57,7 +59,7 @@ export default {
       offsetTopTabControl:0,
       isShowTabControl:false,
       saveY:0
-    };
+          };
   },
   computed:{
     
@@ -78,26 +80,18 @@ export default {
  
 
   },
-  mounted(){
-
-
-
-     //3.监听item中图片加载完成
-     const refresh=this.debounce(this.$refs.scroll.refresh)
-    this.$bus.$on('itemImageLoad',()=>{
-      // this.$refs.scroll&&this.$refs.scroll.refresh()
-      refresh()
-    })
-     
-  },
+  mixins:[itemImgListener],
   activated(){
-    console.log('activated')
+    // console.log('activated')
     this.$refs.scroll.scrollTo(0,this.saveY,0)
     this.$refs.scroll.refresh()
   },
   deactivated(){
+    //1.保存页面滚动的距离
     this.saveY=this.$refs.scroll.getSaveY()
-    console.log(this.saveY)
+    //2.取消全局事件的监听
+    this.$bus.$off('itemImageLoad',this.itemImageListener)
+    // console.log(this.saveY)
 
   },
   methods: {
@@ -135,17 +129,17 @@ export default {
       this.isShowTabControl=(-position.y)>this.offsetTopTabControl?true:false;
     },
 
-    //防抖动
-    debounce(func,delay){
-      let timer=null
-      return function(...args){
-        if(timer) clearTimeout(timer)
-        timer=setTimeout(()=>{
+    //防抖动    把他抽离出去 放到common/utils.js
+    // debounce(func,delay){
+    //   let timer=null
+    //   return function(...args){
+    //     if(timer) clearTimeout(timer)
+    //     timer=setTimeout(()=>{
 
-          func.apply(this,args)
-        },delay)
-      }
-    },
+    //       func.apply(this,args)
+    //     },delay)
+    //   }
+    // },
 
 
 
@@ -212,6 +206,7 @@ export default {
   top:44px;
   bottom:49px;
   left: 0;
+  background-color: #fff;
   right:0;
 
 }

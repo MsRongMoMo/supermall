@@ -44,7 +44,6 @@ export default {
     })
    }
 
-    console.log(this.scroll)
 
     //监听上拉事件
     // this.scroll.on('pullingUp',()=>{
@@ -69,6 +68,7 @@ if(this.pullUpLoad){
       
     },
     refresh(){
+
       this.scroll&&this.scroll.refresh()
     },
 
